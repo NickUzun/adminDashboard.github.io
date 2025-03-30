@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard Template</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button class="menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
+    <div class="sidebar" id="sidebar">
+      <div class="logoName">
+        <img id="imgLogo" src="images/logo.png" alt="logo" />
+        <h2>Dashdark X</h2>
+      </div>
+      <div>
+        <input type="text" class="search-menu" placeholder="Search for ..." />
+      </div>
+      <ul>
+        <li onClick="toggleDropdown(this)">
+          <img class="icons home" src="images/home.png" alt="home" />Dashboard
+          <ul class="dropdown">
+            <li>Reports</li>
+            <li>Products</li>
+            <li>Task</li>
+          </ul>
+        </li>
+        <li onClick="toggleDropdown(this)">
+          <img class="icons star" src="images/star.png" alt="star" />Features
+          <ul class="dropdown">
+            <li>Quality</li>
+            <li>Quantity</li>
+            <li>Order</li>
+          </ul>
+        </li>
+        <li onClick="toggleDropdown(this)">
+          <img class="icons user" src="images/user.png" alt="user" />Users
+          <ul class="dropdown">
+            <li>New customer</li>
+            <li>Old customer</li>
+            <li>In doubts</li>
+          </ul>
+        </li>
+        <li onClick="toggleDropdown(this)">
+          <img
+            class="icons pricing"
+            src="images/dollar.png"
+            alt="pricing"
+          />Pricing
+          <ul class="dropdown">
+            <li>High price</li>
+            <li>Medium price</li>
+            <li>Low price</li>
+          </ul>
+        </li>
+        <li onClick="toggleDropdown(this)">
+          <img
+            class="icons planet"
+            src="images/planet.png"
+            alt="planet"
+          />Integrations
+          <ul class="dropdown">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+        </li>
+        <hr />
+        <li onClick="toggleDropdown(this)">
+          <img
+            class="icons settings"
+            src="images/settings.png"
+            alt="settings"
+          />Settings
+          <ul class="dropdown">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+        </li>
+        <li onClick="toggleDropdown(this)">
+          <img
+            class="icons settings"
+            src="images/pages.png"
+            alt="settings"
+          />Template Pages
+          <ul class="dropdown">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+        </li>
+        <li onClick="toggleDropdown(this)">
+          <img
+            style="width: 30px"
+            class="icons settings"
+            src="images/photo.png"
+            alt="settings"
+          />John Carter
+          <ul class="dropdown" style="padding-left: 20px">
+            Account settings
+          </ul>
+        </li>
+        <button class="getTemplate-btn">
+          Get template <img src="images/arrow.png" alt="" />
+        </button>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="header">
+        <h1>Product List</h1>
+        <input
+          type="text"
+          class="search-box"
+          placeholder="Search for product..."
+        />
+        <button class="addNewProduct-btn">Add new product</button>
+      </div>
+      <div class="table-container">
+        <table>
+          <tr>
+            <th><input type="checkbox" onclick="toggleRow(this)"/></th>
+            <th>Product Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Company</th>
+            <th>Status</th>
+          </tr>
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <img
+                style="width: 20px; margin-right: 10px"
+                src="images/watch.png"
+                alt="watch"
+              />Watch
+            </td>
+            <td>Accessories</td>
+            <td>$100</td>
+            <td>Google</td>
+            <td>In Stock</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <img
+                style="width: 20px; margin-right: 10px"
+                src="images/phone.png"
+                alt="phone"
+              />Mobile
+            </td>
+
+            <td>Phones</td>
+            <td>$200</td>
+            <td>Meta</td>
+            <td>Out of Stock</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <img
+                style="width: 20px; margin-right: 1px"
+                src="images/laptop.png"
+                alt="laptop"
+              />
+              Laptop
+            </td>
+            <td>Notebooks</td>
+            <td>$800</td>
+            <td>Facebook</td>
+            <td>Out of Stock</td>
+          </tr>
+
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <img
+                style="width: 20px; margin-right: 10px"
+                src="images/TV.png"
+                alt=""
+              />TV
+            </td>
+            <td>Digital</td>
+            <td>$250</td>
+            <td>Twitter</td>
+            <td>in Stock</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <img
+                style="width: 20px; margin-left: 0; margin-right: 10px"
+                src="images/camera.png"
+                alt=""
+              />Camera
+            </td>
+            <td>Digital</td>
+            <td>$250</td>
+            <td>Twitter</td>
+            <td>in Stock</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <img
+                style="width: 20px; margin-right: 10px"
+                src="images/watch.png"
+                alt="watch"
+              />Watch
+            </td>
+            <td>Accessories</td>
+            <td>$100</td>
+            <td>Google</td>
+            <td>In Stock</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <img
+                style="width: 20px; margin-right: 10px"
+                src="images/phone.png"
+                alt="phone"
+              />Mobile
+            </td>
+            <td>Phones</td>
+            <td>$200</td>
+            <td>Meta</td>
+            <td>Out of Stock</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <img
+                style="width: 20px; margin-right: 1px"
+                src="images/laptop.png"
+                alt="laptop"
+              />
+              Laptop
+            </td>
+            <td>Notebooks</td>
+            <td>$800</td>
+            <td>Facebook</td>
+            <td>Out of Stock</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <img
+                style="width: 20px; margin-left: 0; margin-right: 10px"
+                src="images/TV.png"
+                alt=""
+              />TV
+            </td>
+            <td>Digital</td>
+            <td>$250</td>
+            <td>Twitter</td>
+            <td>in Stock</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <img
+                style="width: 20px; margin-left: 0; margin-right: 10px"
+                src="images/camera.png"
+                alt=""
+              />Camera
+            </td>
+            <td>Digital</td>
+            <td>$250</td>
+            <td>Twitter</td>
+            <td>in Stock</td>
+          </tr>
+
+          <tr>
+            <td><input type="checkbox" /></td>
+            <td>
+              <img
+                style="width: 20px; margin-right: 10px"
+                src="images/perfume.png"
+                alt="watch"
+              />Perfume
+            </td>
+            <td>Cosmetics</td>
+            <td>$25</td>
+            <td>Reddit</td>
+            <td>In Stock</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

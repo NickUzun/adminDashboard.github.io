@@ -1,0 +1,204 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    /* Secondary Colors */
+    --color1-: #101935;
+    --color2-: #8951FF;
+    --color3-: #57C3FF;
+    --color4-: #0e43fb;
+    --color5-: #fdb52a;
+    
+    /* Neutral Colors */
+    --colorNeutral-800: #081028;
+    --colorNeutral-700: #0A1330;
+    --colorNeutral-600: #0B1739;
+    --colorNeutral-500: #7E89AC;
+    --colorNeutral-400: #AEB9E1;
+    --colorNeutral-300: #D1DBF9;
+    --colorNeutral-200: #D9E1FA;    
+    --colorNeutral-100: #FFFFFF;  
+}
+body {
+    font-family: "Poppins",sans-serif;
+    background-color: var(--colorNeutral-800);
+    color: var(--colorNeutral-100);
+    }
+
+
+.icons{
+    
+        width: 16px;
+        margin-right: 8px;
+    }
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: var(--colorNeutral-700);
+    padding: 20px;
+    position: fixed;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Sidebar hover and dropdown Begins */
+
+.sidebar li:hover {
+    border-left: 4px solid var(--color3-);
+    background-color: var(--colorNeutral-600);
+}
+ .sidebar li  {
+    
+    position: relative;
+    margin-right: 10px;
+    padding: 10px;
+}
+.dropdown {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+}
+.sidebar li.active .dropdown {
+    display: block;
+} 
+hr{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* Sidebar hover and dropdown Ends */
+
+.search-menu {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    background-color: var(--colorNeutral-600);
+    color: var(--colorNeutral-100);
+    margin: 25px auto;
+}
+
+.logoName {
+    display: flex;
+}
+#imgLogo {
+    width: 30px;
+    margin-right: 8px;
+}
+.content {
+    margin-left: 275px;
+    padding: 20px;
+    transition: margin-left 0.3s ease-in-out;
+   cursor: pointer;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.search-box {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    background-color: var(--colorNeutral-600);
+    color: var(--colorNeutral-100);
+}
+.addNewProduct-btn {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    width: 150px;
+    background-color:var(--color2-);
+    color: var(--colorNeutral-100);
+    background-image: linear-gradient(to bottom right,#6a36dc,rgb(138, 9, 127));
+    cursor: pointer;
+}
+.getTemplate-btn{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px ;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    width: 210px;
+    background-color:var(--color2-);
+    color: var(--colorNeutral-100);
+    background-image: linear-gradient(to bottom right,#6a36dc,rgb(138, 9, 127));
+    cursor: pointer;
+}
+.table-container {
+    background-color: var(--colorNeutral-700);
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+th {
+    background-color: var(--colorNeutral-600);
+}
+tr:nth-child(even) {
+    background-color: var(--colorNeutral-700);
+}
+tr:nth-child(odd) {
+    background-color: var(--colorNeutral-800);
+}
+.menu-toggle {
+    display: none;
+    background-color: var(--colorNeutral-600);
+    color: var(--colorNeutral-100);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+table input[type="checkbox"]:checked {
+    accent-color: var(--color2-);
+}
+
+/* Responsive Design */
+@media (max-width: 568px) {
+    .sidebar {
+        transform: translateX(-100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250px;
+    }
+    .sidebar.active {
+        transform: translateX(0);
+    }
+    .addNewProduct-btn{
+       margin-top: 10px;
+        
+    }    .content {
+        margin-left: 0;
+    }
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .search-box {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .menu-toggle {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
