@@ -150,9 +150,14 @@ table {
     border-collapse: collapse;
 }
 th, td {
+    
     padding: 10px;
     text-align: left;
 }
+ table tr:hover{
+    background-color: var(--colorNeutral-600);
+}
+
 th {
     background-color: var(--colorNeutral-600);
 }
